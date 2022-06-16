@@ -17,7 +17,6 @@ const ul = document.querySelector("ul");
 cities.appendChild("ul");
 
 async function getCityWeather() {
-	const apiKey = "4db1f3a4ef7796d0c3172263f48a161b";
 	const city = "Liège";
 	let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&cnt=5`);
 	let data = await response.json();
