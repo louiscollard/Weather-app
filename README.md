@@ -10,6 +10,7 @@ On clicking the SUBMIT button the application will display the weather for the n
 - JS
 
 ## Website
-![weather-app](./weather-app)
+![weather-app](https://louiscollard.github.io/Weather-app/)
 
 ## Link
+- https://louiscollard.github.io/Weather-app/
