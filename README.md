@@ -10,7 +10,7 @@ On clicking the SUBMIT button the application will display the weather for the n
 - JS
 
 ## Website
-![weather-app.jpg](file:///Users/Louis/BeCode/02_the_hill/03_Weather-app/weather-app.jpg)
+[![weather-app.jpg](https://i.postimg.cc/bwdq40gJ/weather-app.jpg)](https://postimg.cc/3k5MvvP5)
 
 ## Link
 - https://louiscollard.github.io/Weather-app/
