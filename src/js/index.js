@@ -1,8 +1,10 @@
 "use strict";
 
-const apiKey = "4db1f3a4ef7796d0c3172263f48a161b";
+import { config } from "./config.js";
+
+const apiKey = config.API_KEY;
 const btnSubmit = document.getElementById("button");
-const barCanvas = document.getElementById("barCanvas");
+const lineCanvas = document.getElementById("lineCanvas");
 
 btnSubmit.addEventListener("click", () => {
 	const inputCity = document.getElementById("city").value;
@@ -72,7 +74,7 @@ btnSubmit.addEventListener("click", () => {
 		dayFiveSkyDisplay.textContent = data.list[32].weather[0].main;
 
 		//CHART
-		const barChart = new Chart(barCanvas, {
+		const lineChart = new Chart(lineCanvas, {
 			type: "line",
 			data: {
 				labels: [dayDisplay, dayDisplayTwo, dayDisplayThree, dayDisplayFour, dayDisplayFive],
