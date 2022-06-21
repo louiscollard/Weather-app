@@ -2,13 +2,13 @@
 
 const apiKey = "4db1f3a4ef7796d0c3172263f48a161b";
 const btnSubmit = document.getElementById("button");
+const barCanvas = document.getElementById("barCanvas");
 
 btnSubmit.addEventListener("click", () => {
 	const inputCity = document.getElementById("city").value;
 	async function getCityWeather() {
 		let response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inputCity}&appid=${apiKey}&units=metric`);
 		let data = await response.json();
-		console.log(data);
 
 		// City and country
 		const cityDisplay = document.querySelector(".city");
@@ -70,6 +70,24 @@ btnSubmit.addEventListener("click", () => {
 		dayFiveNameDisplay.textContent = dayDisplayFive;
 		dayFiveTempDisplay.textContent = data.list[32].main.temp + " °C";
 		dayFiveSkyDisplay.textContent = data.list[32].weather[0].main;
+
+		//CHART
+		const barChart = new Chart(barCanvas, {
+			type: "line",
+			data: {
+				labels: [dayDisplay, dayDisplayTwo, dayDisplayThree, dayDisplayFour, dayDisplayFive],
+				datasets: [
+					{
+						label: "°C for next 5 days",
+						data: [data.list[0].main.temp, data.list[8].main.temp, data.list[16].main.temp, data.list[24].main.temp, data.list[32].main.temp],
+						fill: true,
+						backgroundColor: "white",
+						tension: 0.1,
+						responsive: true,
+					},
+				],
+			},
+		});
 	}
 	getCityWeather();
 });
