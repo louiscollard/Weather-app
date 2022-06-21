@@ -10,6 +10,6 @@ On clicking the SUBMIT button the application will display the weather for the n
 - JS
 
 ## Website
-![weather-app](./weather-app.jpeg)
+![weather-app](./weather-app)
 
 ## Link
